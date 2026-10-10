@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local data: imported snapshots and raw (unsanitized) exports
+records/
+backend/data/
+fixtures/raw/
+FC27_*.json
+# Sanitized fixtures still contain the real club; kept local for now
+fixtures/sanitized_exports/*.json
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+
+# Editors / OS
+.idea/
+.vscode/
+.claude/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

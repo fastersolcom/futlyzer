@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "FC27 Club Exporter",
+  "version": "0.4.0",
+  "description": "Passively exports FUT.GG GG Club players, active squad and tactics.",
+  "permissions": ["downloads"],
+  "host_permissions": ["https://www.fut.gg/*"],
+  "action": {"default_popup":"popup.html","default_title":"FC27 Club Exporter"},
+  "background": {"service_worker":"background.js"},
+  "content_scripts": [{
+    "matches":["https://www.fut.gg/*"],
+    "js":["content.js"],
+    "run_at":"document_start"
+  }],
+  "web_accessible_resources":[{
+    "resources":["page-hook.js"],
+    "matches":["https://www.fut.gg/*"]
+  }]
+}
